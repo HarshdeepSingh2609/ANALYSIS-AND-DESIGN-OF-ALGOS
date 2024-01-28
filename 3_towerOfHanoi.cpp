@@ -18,7 +18,7 @@ int main() {
   int n;
   char s='A';char sp='B';char d='C';
 
-  for(int i=2;i<=100;i+=10) {
+  for(int i=2;i<=50;i+=5) {
    clock_t t1=clock(); 
     n=i;
    for(int j=1;j<=1;j++) {
