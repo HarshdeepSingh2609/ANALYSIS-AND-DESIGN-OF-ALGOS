@@ -13,7 +13,8 @@ int partition(vector<pair<int,int>> &arr , int low , int high)
         i++;
         while(arr[j].first > pivot && j>=low+1)
         j--;
-        if(i<j) swap(arr[i],arr[j]); 
+        if(i<j) 
+        swap(arr[i],arr[j]); 
     }
     swap(arr[low],arr[j]);
     return j;
