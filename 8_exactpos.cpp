@@ -59,7 +59,7 @@ int main()
     float y[100];
     int x[100];
     int z = 0;
-    for (int i = 10; i <= 1000; i += 10)
+    for (int i = 10000; i <= 1000000; i += 10000)
     {
         int arr[i];
         // Generates random numbers from 1 to i
