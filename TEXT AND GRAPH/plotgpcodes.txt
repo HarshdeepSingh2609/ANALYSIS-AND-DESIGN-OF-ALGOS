@@ -1,0 +1,111 @@
+set terminal pngcairo enhanced font 'Arial,12'
+set output 'plot.png'
+set title 'Average Sorting Time vs. Array Size'
+set xlabel 'Array Size'
+set ylabel 'Average Sorting Time (seconds)'
+set grid
+plot 'data.txt' with linespoints title 'Sorting Time'
+
+set title "Average Time to Compute Sum vs. Array Size"
+set xlabel "Array Size"
+set ylabel "Average Time (seconds)"
+set terminal pngcairo enhanced font "arial,10" # Specify output format
+set output 'sum_times_plot.png' # Specify output filename
+plot "sum_times.txt" using 1:2 with lines title "Sum Time"
+
+
+set title "Average Time to Solve Tower of Hanoi vs. Number of Discs"
+set xlabel "Number of Discs"
+set ylabel "Average Time (seconds)"
+set terminal pngcairo enhanced font "arial,10" # Specify output format
+set output 'TOH_times_plot.png' # Specify output filename
+plot "TOH_times.txt" using 1:2 with lines title "Tower of Hanoi Time"
+
+set title "Average Time to Generate Combinations vs. Number of Variables"
+set xlabel "Number of Variables"
+set ylabel "Average Time (seconds)"
+set terminal pngcairo enhanced font "arial,12"
+set output 'combination_generation_plot.png'
+plot "combination_times.txt" using 1:2 with lines title "Combination Generation Time"
+
+set title "Average Time to Evaluate Polynomial using Horner's Method vs. Polynomial Degree"
+set xlabel "Polynomial Degree"
+set ylabel "Average Time (seconds)"
+set terminal pngcairo enhanced font "arial,12"
+set output 'horner_times_plot.png'
+plot "horner_times.txt" using 1:2 with lines title "Horner's Method Evaluation Time"
+
+
+set title "Average Time to Compute Exponentiation vs. Exponent Value"
+set xlabel "Exponent Value"
+set ylabel "Average Time (seconds)"
+set terminal pngcairo enhanced font "arial,12"
+set output 'exponentiation_times_plot.png'
+plot "exponentiation_times.txt" using 1:2 with lines title "Exponentiation Time"
+
+
+set title "Average Time to Merge Two Sorted Arrays vs. Array Size"
+set xlabel "Array Size"
+set ylabel "Average Time (seconds)"
+set terminal pngcairo enhanced font "arial,12"
+set output 'merge_times_plot.png'
+plot "merge_times.txt" using 1:2 with lines title "Merge Time"
+
+
+set title "Average Time to Find Pivot vs. Array Size"
+set xlabel "Array Size"
+set ylabel "Average Time (seconds)"
+set terminal pngcairo enhanced font "arial,12"
+set output 'pivot_times_plot.png'
+plot "pivot_times.txt" using 1:2 with lines title "Pivot Time"
+
+
+
+set title "Average Time to Find Max and Min vs. Array Size"
+set xlabel "Array Size"
+set ylabel "Average Time (milliseconds)"
+set terminal pngcairo enhanced font "arial,12"
+set output 'max_min_times_plot.png'
+plot "recursive_data.txt" using 1:2 with lines title "Recursive", \
+     "iterative_data.txt" using 1:2 with lines title "Iterative"
+
+
+
+set title "Average Time vs. Input Size"
+set xlabel "Input Size"
+set ylabel "Average Time (seconds)"
+plot "merge_sort_data.txt" with lines title "Merge Sort"
+
+set term png
+set output "merge_sort_plot.png"
+replot
+
+set terminal png
+set output 'qsit.png'
+set title 'Average Time vs. Input Size for QuickSort (Iterative)'
+set xlabel 'Input Size'
+set ylabel 'Average Time (seconds)'
+plot 'qsrec.txt' with lines title 'QuickSort (Iterative)'
+
+set terminal png
+set output 'sssp.png'
+set title 'Average Time vs. Number of Vertices for Single Source Shortest Path'
+set xlabel 'Number of Vertices'
+set ylabel 'Average Time (seconds)'
+plot 'sssp.txt' with lines title 'SSSP'
+
+set terminal png
+set output 'prims.png'
+set title 'Average Time vs. Number of Vertices for Prims Algorithm'
+set xlabel 'Number of Vertices'
+set ylabel 'Average Time (seconds)'
+plot 'prims.txt' with lines title 'Prims Algorithm'
+
+
+set terminal pngcairo enhanced font 'Verdana,12'
+set output 'kruskal.png'
+set title 'Average Time vs. Number of Vertices for Kruskals Algorithm'
+set xlabel 'Number of Vertices'
+set ylabel 'Average Time (seconds)'
+set grid
+plot 'kruskal_data.txt' with linespoints title 'Kruskals Algorithm'
