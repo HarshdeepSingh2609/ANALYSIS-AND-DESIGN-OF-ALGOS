@@ -18,7 +18,8 @@ Each line in the file contains the array size followed by the average sorting ti
 Integration with Gnuplot:
 
 GRAPH:
- 
+![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/7205ce4c-7004-4997-a38c-dd3893dbee1e)
+
 
 TIME COMPLEXITY: The time complexity of the selection sort algorithm is O(n^2), where n is the number of elements in the array.
 
