@@ -18,6 +18,7 @@ Each line in the file contains the array size followed by the average sorting ti
 Integration with Gnuplot:
 
 GRAPH:
+
 ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/7205ce4c-7004-4997-a38c-dd3893dbee1e)
 
 
@@ -36,10 +37,9 @@ Code Functionality: The code generates arrays of different sizes (from 1,000 to 
 Measurement Approach: For each array size, the sum function is called 10 times to average the execution time, minimizing variability due to system load or other processes.
 Data Output: The program outputs the size of the array and the average time taken for the sum function to execute, which can be used to plot a graph with GNUplot.
 
-
-
 GRAPH:
- 
+
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/16a00ecb-9f59-4ea9-a873-a343d88168e0)
 
 TIME COMPLEXITY:
 The time complexity of the recursive sum function is O(n), where n is the length of the array. This is because the function performs a single operation for each element of the array once.
@@ -62,11 +62,8 @@ AIM: Demonstrate the Tower of Hanoi algorithm and analyze its time complexity as
 
 DESCRIPTION: The Tower of Hanoi is a classic problem that involves moving a stack of discs from one rod to another, following specific rules. This program measures the time taken to solve the Tower of Hanoi problem for varying numbers of discs.
 
-
-
 GRAPH:
-
- 
+![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/fe7c303e-6842-40c8-9a27-68cec2c8eb6f)
 
 
 TIME COMPLEXITY:
@@ -99,6 +96,8 @@ DESCRIPTION:
 
 
 GRAPH:
+![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/d0dbfb68-58a8-411a-b557-3685f42fbd3b)
+
  
 
 TIME COMPLEXITY:
@@ -109,7 +108,6 @@ USAGE :
 •	Compile and run the program.
 •	The program generates data on the average time taken to generate combinations for different numbers of variables.
 •	Use the provided GNUplot script (plot.gp) to plot the data and visualize the time complexity trend.
-
 
 
 CONCLUSION:
@@ -126,9 +124,9 @@ DESCRIPTION:The program evaluates polynomials of increasing degrees using Horner
 It measures the time taken for polynomial evaluation for different polynomial degrees.
 The data collected is written to a file for further analysis.
 
-
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/67915657-34cf-4a2d-9181-582ff804a8c7)
+
 
 
 TIME COMPLEXITY:
@@ -159,7 +157,8 @@ The data collected is used to analyze the time complexity of the iterative expon
 
 
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/2d7917d5-d657-4c2e-b64c-03a4e1c0623e)
+
 
 
 TIME COMPLEXITY:
@@ -186,9 +185,9 @@ It merges these arrays into a single sorted array.
 The data collected is used to analyze the time complexity of the merging process.
 
 
-
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/00c8c0da-7480-4ce2-aac6-37363fc4cb07)
+
 
 TIME COMPLEXITY:
 The time complexity of merging two sorted arrays of sizes m and n is O(m + n).
@@ -215,7 +214,8 @@ The data collected is used to analyze the time complexity of the pivot selection
 
 
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/ae32aecd-c3f5-4163-8813-8b3a8fd43b6a)
+
 
 TIME COMPLEXITY:
 The time complexity of the pivot selection process in QuickSort is O(n), where n is the size of the array.
@@ -239,9 +239,9 @@ It measures the average time taken to perform the binary search for each array s
 Additionally, it outputs the index of the found element for each iteration.
 
 
-
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/642a8092-b716-4a3a-9578-d282b6e73e8d)
+
 
 
 TIME COMPLEXITY:The time complexity of the binary search algorithm is O(log n), where n is the size of the array.
@@ -268,7 +268,8 @@ After collecting the data, a Gnuplot script is used to create a comparison plot 
 
 
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/08ddc98e-1be5-4d8f-8d7b-bc1a6d2c9d83)
+
 
 TIME COMPLEXITY:
 The time complexity of the recursive method for finding the maximum and minimum elements is O(n), where n is the size of the array.
@@ -291,7 +292,8 @@ DESCRIPTION:The program implements the Merge Sort algorithm to sort arrays of va
 
 
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/c01f7c1f-9c77-4bdc-b9e7-6cab3cf3a747)
+
 
 TIME COMPLEXITY:Merge Sort has a time complexity of O(n log n) in the average and worst cases. The time taken for sorting increases logarithmically with the input size.
 
@@ -316,11 +318,10 @@ DESCRIPTION:
 •	Finally, it generates a Gnuplot script to visualize the average time vs. input size.
 
 
-
-
 GRAPH:
 
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/31454a7f-c8bf-4ede-ad5c-4ec317a22f31)
+
 
 TIME COMPLEXITY: The average-case time complexity of QuickSort is O(n log n), where n is the number of elements in the array.
 
@@ -332,8 +333,6 @@ USAGE:
 CONCLUSION:The analysis shows that the average time taken by QuickSort increases logarithmically with the input size, confirming its expected time complexity of O(n log n).
 
 
-
-
 2.4 MATRIX MULTIPLICATION
 
 AIM:To empirically analyze the execution time of a recursive matrix multiplication algorithm across matrices of increasing sizes and to compare the experimental data with the theoretical computational complexity.
@@ -343,8 +342,9 @@ DESCRIPTION:
 •	The experiment is conducted by performing ten iterations of multiplication for each matrix size to calculate an average execution time, which is then saved to a file. This data collection aims to provide insights into the practical performance and scalability of the recursive matrix multiplication algorithm.
 
 
-
 GRAPH:
+![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/fec98ac1-9f70-45cd-b54b-26c9ace4b952)
+
  
 
 TIME COMPLEXITY:The traditional recursive matrix multiplication algorithm has a theoretical time complexity of O(n^3), where n is the size of the matrix. This program seeks to empirically validate this complexity by observing the execution time growth as matrix sizes increase.
@@ -367,7 +367,7 @@ DESCRIPTION:
 
 
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/b6ecd2fb-b884-4eb7-84d2-b28fdcb5e04e)
 
 
 TIME COMPLEXITY:The time complexity of Strassen's algorithm for matrix multiplication is approximately O(n^log7), where n is the size of the matrices.
@@ -382,8 +382,6 @@ The analysis reveals how the average time to perform matrix multiplication varie
 
 
 
-
-
 LAB-4
 4.1 KNAPSACK
 
@@ -395,10 +393,9 @@ DESCRIPTION:
 •	The Knapsack algorithm efficiently determines the maximum achievable profit considering the weight capacity constraint.
 
 
-
 GRAPH:
 
- 
+![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/d694042d-e958-429c-8f82-8e0df71390aa)
 
 
 TIME COMPLEXITY:
@@ -428,10 +425,9 @@ DESCRIPTION:
 •	It measures the average time taken to sort each array size over multiple iterations and writes this data to a file named 'qsrec.txt'.
 •	The data is then visualized using Gnuplot to analyze the relationship between input size and average sorting time.
 
-
-
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/d41afbc3-bf2e-44d0-b6b5-f07de0ffca4e)
+
 
 TIME COMPLEXITY: The average-case time complexity of QuickSort is O(n log n), where n is the number of elements in the array.
 
@@ -442,11 +438,6 @@ USAGE
 
 CONCLUSION:
 The analysis reveals the average time taken by the iterative QuickSort algorithm increases logarithmically with the input size, aligning with the expected time complexity of O(n log n).
-
-4.3 ACTIVITY SELECTION:
-
-
-
 
 
 
@@ -464,6 +455,7 @@ Finally, it prints the number of vertices and the average time taken for each it
 
 
 GRAPH:
+![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/9f4ad2bd-61f4-4080-9d0f-b4190224e291)
 
  
 
@@ -487,7 +479,8 @@ Additionally, it outputs the edges of the minimum spanning tree for each iterati
 
 
 GRAPH:
- 
+ ![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/b90121f1-d99b-428e-bf08-adb985b4a556)
+
 
 TIME COMPLEXITY:
 The time complexity of Prim's algorithm is typically O(V^2), where V is the number of vertices in the graph.
@@ -509,10 +502,9 @@ It measures the average time taken to compute the minimum spanning tree for each
 Additionally, it outputs the edges of the minimum spanning tree for each iteration.
 
 
-
-
 GRAPH:
  
+![image](https://github.com/HarshdeepSingh2609/ANALYSIS-AND-DESIGN-OF-ALGOS/assets/157723183/0b4d9778-5f52-44d0-a512-955b7196f82d)
 
 
 TIME COMPLEXITY:The time complexity of Kruskal's algorithm is typically O(E log V), where V is the number of vertices and E is the number of edges in the graph.
