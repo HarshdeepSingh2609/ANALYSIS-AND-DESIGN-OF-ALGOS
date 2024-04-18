@@ -1,9 +1,7 @@
 
 LAB-1
 1.1	: SELECTION SORT
-
 AIM:The aim of this code is to implement and analyze the performance of the selection sort algorithm for sorting arrays of varying sizes.
-
 DESCRIPTION:
 The code implements the selection sort algorithm to sort arrays of integers.
 Random Data Generation:
@@ -516,3 +514,235 @@ USAGE:
 
 CONCLUSION:The analysis reveals how the average time to compute minimum spanning trees varies with increasing numbers of vertices in the graph, providing insights into the performance characteristics of Kruskal's algorithm.
 
+
+LAB -6
+6.1: ALL PAIR SHORTEST PATH
+AIM: The aim of this program is to find the shortest distances and paths between every pair of vertices in a given directed weighted graph using the Floyd-Warshall algorithm.
+
+DESCRIPTION: The program implements the Floyd-Warshall algorithm, which is a dynamic programming approach for finding the shortest paths in a weighted graph with positive or negative edge weights (but no negative cycles). It works for both directed and undirected graphs.
+
+ALGORITHM:
+1.Initialize a 2D array distance[V][V] to store the shortest distances between every pair of vertices. 2.Initialize another 2D array predecessor[V][V] to keep track of the predecessors for reconstructing paths.
+3.Initialize distance[i][j] to the weight of the edge from vertex i to vertex j if there is an edge, otherwise set it to infinity. Set predecessor[i][j] to i if there is an edge from i to j, otherwise set it to -1.
+4.Apply the Floyd-Warshall algorithm:
+•	For each vertex k from 1 to V:
+•	For each pair of vertices i and j:
+•	If the distance from i to k and from k to j is shorter than the current distance from i to j, update the distance and predecessor arrays accordingly.
+5.After the algorithm finishes, the distance array will contain the shortest distances between every pair of vertices, and the predecessor array will contain the predecessors for reconstructing the shortest paths.
+Print the shortest distances and paths between every pair of vertices.
+
+
+TIME COMPLEXITY: The time complexity of the Floyd-Warshall algorithm is O(V^3), where V is the number of vertices in the graph.
+USAGE:
+Define a directed weighted graph in the form of an adjacency matrix where graph[i][j] represents the weight of the edge from vertex i to vertex j. Use INF (infinity) to represent absence of an edge.
+Call the allPairsShortestPath() function, passing the graph as an argument.
+
+6.2: ASSEMPLY LINE
+AIM:The aim of this code is to calculate the minimum time required for the assembly of products in a production line, considering two parallel assembly lines with multiple stations.
+
+ DESCRIPTION:This code implements a dynamic programming approach to determine the minimum time required for the assembly process. It considers two parallel assembly lines with multiple stations, where each station has a specific processing time. The time required for transferring products between stations is also taken into account.
+
+ ALGORITHM:
+1. Initialize arrays to store the processing time for each station on both assembly lines.
+2. Calculate the time required for each station on both assembly lines, considering the transfer time between stations.
+3. Determine the minimum time by comparing the total time for both assembly lines.
+4. Track the path of assembly by identifying the stations used on each line.
+
+TIME COMPLEXITY:The time complexity of this algorithm is O(n), where n is the number of stations in each assembly line.
+
+
+
+6.3 LONGEST COMMON SUBSEQUENCE
+
+AIM:The aim of this code is to find the length of the Longest Common Subsequence (LCS) of two given strings and print the LCS along with arrows indicating the direction.
+
+DESCRIPTION:This code implements the Longest Common Subsequence (LCS) algorithm using dynamic programming. It calculates the length of the LCS of two given strings and prints the LCS along with arrows indicating the direction of the LCS.
+
+ALGORITHM:
+1. Initialize a 2D array to store the length of the LCS for each prefix of the strings.
+2. Iterate through each character of the strings and fill the array based on the LCS algorithm:
+   - If the characters match, increment the LCS length by 1.
+   - Otherwise, take the maximum LCS length from the adjacent cells.
+3. Traverse the filled array to construct the LCS string and mark the direction with arrows.
+4. Print the LCS along with arrows indicating the direction.
+
+ TIME COMPLEXITY:The time complexity of this algorithm is O(m*n), where m is the length of the first string and n is the length of the second string.
+
+USAGE:
+1. Define two strings S1 and S2.
+2. Call the `longestCommonSubsequence()` function with the two strings as parameters.
+3. The function returns the length of the LCS and prints the LCS along with arrows.
+4. Print the length of the LCS returned by the function.
+
+6.4 MULTISTAGE GRAPH
+AIM:The aim of this code is to calculate the minimum cost and path for a given directed acyclic graph (DAG) using the forward cost algorithm.
+
+DESCRIPTION:This code implements the forward cost algorithm to find the minimum cost and path for a given directed acyclic graph (DAG). It calculates the minimum cost starting from the source vertex to the destination vertex, considering the costs of the edges and stages.
+
+ALGORITHM:
+1. Calculate the number of stages in the graph using a recursive function.
+2. Calculate the forward cost for each vertex in the graph:
+   - For each vertex, find the minimum cost vertex reachable from it.
+   - Update the forward cost of the current vertex as the sum of its edge cost to the minimum cost vertex and the forward cost of the minimum cost vertex.
+3. Determine the path using the calculated forward costs:
+   - Initialize an array to store the path vertices.
+   - Start from the source vertex and traverse through the stages, selecting the minimum cost vertex at each stage.
+4. Print the minimum cost and the path.
+
+TIME COMPLEXITY:The time complexity of this algorithm is O(V^2), where V is the number of vertices in the graph.
+
+USAGE:
+1. Define a directed acyclic graph (DAG) represented as an adjacency matrix.
+2. Call the `calculateStages()` function to calculate the number of stages in the graph.
+3. Determine the parameter k, which represents the number of stages.
+4. Call the `calculateForwardCost()` function with the graph, number of vertices, and parameter k.
+5. The function will print the minimum cost and the path from the source to the destination vertex.
+
+LAB-7
+
+7.1 KNAPSACK DP
+AIM:The aim of this code is to solve the 0/1 knapsack problem using dynamic programming and print the selected items that maximize the total value.
+
+DESCRIPTION:
+This code implements the dynamic programming approach to solve the 0/1 knapsack problem. It finds the maximum value that can be obtained by selecting a subset of items with given weights and values, such that the total weight does not exceed a given capacity. Additionally, it prints the selected items that contribute to the maximum value.
+
+ALGORITHM:
+1. Initialize a 2D array K[n+1][W+1] to store the maximum value that can be obtained using the first i items and a knapsack capacity of j.
+2. Iterate over each item and capacity:
+   - If the weight of the current item is less than or equal to the current capacity, update K[i][j] to the maximum of the value of including the current item and excluding the current item.
+   - Otherwise, K[i][j] remains the same as the value obtained by excluding the current item.
+3. Print the selected items by backtracking through the K array starting from the bottom-right corner.
+4. Return the maximum value obtained from K[n][W].
+
+TIME COMPLEXITY:
+The time complexity of this algorithm is O(n*W), where n is the number of items and W is the capacity of the knapsack.
+
+USAGE:
+1. Define vectors 'val' and 'wt' representing the values and weights of items, respectively.
+2. Define the capacity 'W' of the knapsack.
+3. Call the 'knapsackDynamicProgramming()' function with the capacity 'W', vectors 'wt' and 'val', and the number of items 'n'.
+4. The function will return the maximum value that can be obtained, and it will print the selected items that contribute to this value.
+
+7.2 MATRIX CHAIN
+AIM:The aim of this code is to find the optimal parenthesization of matrix chain multiplication and calculate the minimum number of multiplications required.
+
+DESCRIPTION:This code implements the dynamic programming approach to find the optimal parenthesization of matrix chain multiplication. It calculates the minimum number of scalar multiplications required to multiply a chain of matrices and prints the optimal parenthesization.
+
+ALGORITHM:
+1. Define a function 'printOptimalParenthesization' to print the optimal parenthesization recursively.
+2. Define a function 'calculateMatrixChainOrder' to calculate the minimum number of scalar multiplications using dynamic programming.
+3. Initialize a 2D array 'm' to store the minimum number of multiplications for each subchain of matrices.
+4. Initialize another 2D array 'brac' to store the index of the matrix that leads to the optimal parenthesization.
+5. Iterate through each subchain length 'L' from 2 to 'n':
+   - For each subchain length, iterate through each starting index 'i' and calculate the minimum number of multiplications for the subchain.
+6. Print the minimum number of multiplications and the optimal parenthesization using the 'printOptimalParenthesization' function.
+
+TIME COMPLEXITY:
+The time complexity of this algorithm is O(n^3), where 'n' is the number of matrices in the chain.
+USAGE:
+1. Define an array 'dimensions' representing the dimensions of matrices in the chain.
+2. Calculate the number of matrices in the chain 'N'.
+3. Call the function 'calculateMatrixChainOrder' with the 'dimensions' array and 'N' as arguments.
+4. The function will print the minimum number of multiplications and the optimal parenthesization.
+
+7.3 NQUEENS
+
+AIM:The aim of this code is to find all possible placements of N queens on an N×N chessboard such that no two queens attack each other.
+
+DESCRIPTION:This code implements the backtracking algorithm to solve the N-Queens problem. It recursively explores all possible placements of queens on the chessboard and checks if each placement is valid.
+
+ALGORITHM:
+1. Define a function 'place' to check if it's valid to place a queen in a particular row and column.
+2. Define a function 'Nqueens' to recursively place queens on the chessboard.
+3. Iterate through each column in the current row and check if it's a valid position to place the queen.
+4. If a valid position is found, mark it and recursively call 'Nqueens' for the next row.
+5. If all queens are placed successfully, print the placement.
+6. In the main function, prompt the user to enter the number of queens 'n'.
+7. Call the 'Nqueens' function to find all possible solutions.
+
+ TIME COMPLEXITY:The time complexity of the N-Queens problem solution using backtracking is O(N!), where N is the number of queens. 
+
+USAGE:
+1. Define an integer variable 'n' to represent the number of queens.
+2. Prompt the user to enter the value of 'n'.
+3. If 'n' is less than or equal to 0, display an error message.
+4. Otherwise, call the 'Nqueens' function with initial parameters (1, n).
+5. The program will print all possible placements of queens on the chessboard.
+
+
+LAB-8:
+8.1KNAPSACK 01 SETS
+AIM: IMPLEMENT KNAPSACK USING MULTIPLE PASSES ALGORITHM
+
+DESCRIPTION:In this implementation, we utilize the Multiple Passes algorithm to solve the knapsack problem efficiently. The algorithm iterates over each item, creating new sets of item combinations and merging them iteratively to avoid redundant calculations and optimize memory usage. By dynamically updating sets of feasible solutions, it gradually builds towards the optimal solution.
+
+ALGORITHM:
+1. Define utility functions for printing sets, finding maximum value, and finding path for maximum value.
+2. Initialize a set s1 with a single pair {0, 0} representing no items selected initially.
+3. Iterate through each item:
+     a. Create a new set s2.
+     b. For each pair (v, w) in s1, add pairs (v + p[i], w + w[i]) to s2 where p[i] is the value of ith item and w[i] is its weight.
+     c. Merge s1 and s2, discarding dominated pairs based on weight, and update s1.
+4. Print the resulting set s1.
+5. Find the maximum value in s1.
+6. Find the path for the maximum value by backtracking.
+7. Print the selected items for the maximum value.
+
+TIME COMPLEXITY:
+- Let n be the number of items, and W be the maximum weight capacity.
+- The time complexity of this algorithm is O(n * W) in the worst case.
+
+USAGE:
+- Modify the values of 'n', 'p' (values), 'w' (weights), and 'W' (maximum weight capacity) in the main function to suit the problem requirements.
+- Compile and run the program to see the maximum value and selected items for the knapsack problem.
+
+8.2 CHROMATIC NUMBER
+
+AIM:SOLVE GRAPH COLORING PROBLEM USING BACKTRACKING ALGORITHM
+
+DESCRIPTION:The graph coloring problem involves assigning colors to the vertices of a graph in such a way that no two adjacent vertices have the same color. This program aims to solve the graph coloring problem using the backtracking algorithm, where it explores all possible color assignments and backtracks when it encounters an invalid coloring.
+
+ALGORITHM:
+1. Initialize the array 'colors' to store the colors assigned to vertices.
+2. Define a recursive function 'mColoring' to perform the graph coloring.
+3. Implement a helper function 'nextVal' to determine the next possible color for a vertex.
+4. Within 'mColoring', iterate over vertices and recursively explore color assignments.
+5. If a valid coloring is found, print the colors assigned to vertices.
+6. Otherwise, backtrack and explore alternative colorings.
+7. Initialize the graph with adjacency matrix representation.
+8. Define the number of vertices 'n' and the maximum number of colors 'm'.
+9. Call the 'mColoring' function with initial parameters.
+10. Print the valid color assignments for the graph.
+
+TIME COMPLEXITY:The time complexity of the backtracking algorithm for the graph coloring problem is O(m^N), where 'N' is the number of vertices and 'm' is the maximum number of colors.
+
+USAGE:
+- Modify the 'graph' array to represent the adjacency matrix of the graph.
+- Set the values of 'n' and 'm' to the appropriate number of vertices and maximum colors.
+- Compile and execute the program.
+- The program will output all valid color assignments for the graph vertices.
+
+8.3 SUM OF SUBSETS:
+AIM:SOLVE THE SUBSET SUM PROBLEM USING BACKTRACKING ALGORITHM
+
+DESCRIPTION:The subset sum problem involves finding all possible subsets of a given set whose elements sum up to a specified target value. This program aims to solve the subset sum problem using the backtracking algorithm, which explores all possible combinations of elements to identify subsets that satisfy the sum condition.
+
+ALGORITHM:
+1. Define an array 'w' to store the elements of the set.
+2. Define an array 'x' to represent the inclusion of elements in subsets.
+3. Initialize variables 'm', 'n', and 'r' to store the target sum, size of the array, and total sum of elements, respectively.
+4. Implement a recursive function 'sumofsubsets' to explore subsets and check for the target sum.
+5. Within 'sumofsubsets', recursively include or exclude elements to form subsets.
+6. If the current subset sums up to the target sum, print the subset.
+7. Initialize the size of the array and target sum by taking input from the user.
+8. Read the elements of the array and calculate the total sum.
+9. Call the 'sumofsubsets' function with appropriate parameters to find subsets with the target sum.
+10. Print the subsets that satisfy the target sum condition.
+
+TIME COMPLEXITY:The time complexity of the backtracking algorithm for the subset sum problem is O(2^N), where 'N' is the size of the input set. This is because the algorithm explores all possible subsets of the input set.
+
+USAGE:
+- Enter the size of the array and the target sum when prompted.
+- Input the elements of the array.
+- Compile and execute the program.
+- The program will output all subsets of the given array that sum up to the specified 
